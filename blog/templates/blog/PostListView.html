@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{%  static 'blog/GrandeVue_Blog.css' %}">
+  <title>GrandeVue Top</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <script src="script_top.js"></script>
+</head>
+
+
+
+  <header>
+    <div class="header-logo"><a href="#">GrandeVue</a></div>
+    <div class="header-menu">
+      <ol>
+        <li><a href="#" >STUDY</a></li>
+        <li><a href="#">PICTURE</a></li>
+        <li><a href="#">COMP</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">LOG IN</a></li>
+      <ol>
+    </div>
+  </header>
+
+
+
+  <body>
+      <div class="main-contents">
+        <div class = "blog_contents">
+
+
+
+          <ul>
+            {% for post in posts%}
+            <li class = "blog_elements">
+              <div class = "headline_picture">
+                <img src="{{ post.thumbnail.url }}">
+              </div>
+
+              <div>
+                <p>
+                  <a href ="{% url 'blog:PostPage' post.pk %}">{{ post.title }}</a>
+                </p>
+                <p class = "writer blog_info">
+                  投稿者：{{ post.author }}
+                </p>
+                <p class = "time_stamp blog_info">
+                  {{ post.date_posted|date:"Y/m/d H:i" }}
+                </p>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+
+
+        <div class = "pagenation">
+          <ul class = "page_list">
+            {% if page_obj.has_previous %}
+              <li><a href="?page={{ page_obj.previous_page_number }}">前へ</a></li>
+            {% else %}
+              <li class = "pre">前へ</li>
+            {% endif %}
+
+            {% for i in page_obj.paginator.page_range %}
+              {% if page_obj.number == i %}
+                <li class = "this">{{ i }}</li>
+              {% else %}
+                <li><a href ="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+              <li><a href="?page={{ page_obj.next_page_number }}">次へ</a></li>
+            {% else %}
+              <li class = "pre">次へ</li>
+            {% endif %}
+          </ul>
+        </div>
+
+
+
+      </div>
+  </body>
+
+
+  <footer>
+    <div class="footer-logo"><a href="#">GrandeVue</a></div>
+
+
+
+    <div class="footer-menu">
+      <ol>
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="GrandeVue_Info/GrandeVue_Info.html">サイト概要</a></li>
+        <li><a href="#">Webポリシー</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">English</a></li>
+      </ol>
+    </div>
+
+
+
+  </footer>
+
+
+
+
+</html>

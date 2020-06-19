@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{%  static 'top/GrandeVue.css' %}">
+  <title>GrandeVue Top</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <script src="script_top.js"></script>
+</head>
+
+
+  <header>
+    <div class="header-logo"><a href="#">GrandeVue</a></div>
+    <div class="header-menu">
+      <ol>
+        <li><a href="#" >STUDY</a></li>
+        <li><a href="#">PICTURE</a></li>
+        <li><a href="#">COMP</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">LOG IN</a></li>
+      <ol>
+    </div>
+  </header>
+
+  <body>
+    <div>
+      <div class="main-contents">
+        <p class="head-line">
+          はじめに
+        </p>
+        <p class="purpose">
+        ただの大学生が勉強の記録を残すためのサイトです。
+        </p>
+        <p class="purpose">
+          サイトの閲覧に際しては，<a href="#">サイト概要</a>をご覧いただいきますようお願い申し上げます。
+        </p>
+        
+
+
+
+
+
+        <div class="topics">
+          トピックス
+        </div>
+        <div class="topics-title">
+          {% for topic in topics%}
+            <p>{{ topic.date_topiced|date:"Y/m/d"  }}　{{ topic.topic }}</p>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+
+
+  <footer>
+    <div class="footer-logo"><a href="#">GrandeVue</a></div>
+    <div class="footer-menu">
+      <ol>
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="GrandeVue_Info/GrandeVue_Info.html">サイト概要</a></li>
+        <li><a href="#">Webポリシー</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">English</a></li>
+
+      </ol>
+    </div>
+  </footer>
+
+
+
+
+</html>

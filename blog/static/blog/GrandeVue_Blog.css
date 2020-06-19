@@ -1,0 +1,236 @@
+/*
+余白をなくす
+--------------------------------------------------------------------------------
+*/
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+/*
+--------------------------------------------------------------------------------
+ヘッダーメニュー
+--------------------------------------------------------------------------------*/
+header{
+  background-color: #89c3eb;
+  float:left;
+  width:100%;
+  position: fixed;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.header-logo{
+  font-family: 'Jockey One', sans-serif;
+  font-size: 50px;
+  float: left;
+  padding-left:40px;
+  color:#d7003a;
+}
+.header-logo a:link, a:visited{
+  text-decoration: none;
+  color: #d7003a;
+}
+
+.header-menu{
+  float: left;
+  background-color: #89c3eb;
+  float:right;
+  font-size: 16px
+}
+.header-menu li{
+   list-style: none;
+   float:left;
+   padding:10px;
+   font-family: Impact;
+   margin-right:10px;
+   margin-top:20px;
+ }
+ .header-menu a{
+    text-decoration: none ;
+  }
+ .header-menu a:link{
+   color:white;
+ }
+ .header-menu a:visited{
+   color: white;
+ }
+ .header-menu a:active{
+   color:#ed6d3d;
+ }
+ /*
+ -------------------------------------------------------------------------------
+ メインコンテンツ
+ -------------------------------------------------------------------------------
+ */
+ body{
+   text-decoration: none;
+   background-image: url(Sun.JPG);
+   background-size: cover;
+}
+.main-contents{
+  height: auto;
+  margin: 0 auto;
+  width:75%;
+  padding-top: 135px;
+  margin-bottom:40px;
+}
+.main-contents a:link{
+  color: blue;
+}
+.main-contents a:visited{
+  color: red;
+}
+
+
+
+.headline_picture img{
+  border:1px solid #aacf53;
+  margin-bottom: 15px;
+  border-radius: 5px / 5px;
+  list-style: none;
+  width:100%;
+  height:auto;
+}
+
+.blog_contents a{
+  text-decoration: none ;
+}
+.blog_contents a:link{
+  color:#2ca9e1;
+}
+.blog_contents a:visited{
+  color:#9e3d3f;
+}
+.blog_contents a:active{
+  color:#ed6d3d;
+}
+
+
+
+
+
+.blog_contents{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  list-style: none;
+}
+
+.blog_elements{
+  border:1px solid #a16d5d;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px / 5px;
+  padding: 5px;
+  list-style: none;
+  width: 47%;
+  display: inline-block;
+}
+
+
+
+.blog_info{
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+
+
+
+.pagenation{
+  text-align: center;
+}
+
+.page_list{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+
+
+.page_list li {
+display: inline-block;
+height:40px;line-height:40px;
+width:40px;text-align:center;
+border:1px #ccc solid;color:#000053;
+border-radius: 5px / 5px;
+}
+
+.page_list .pre {background-color:#ccc;color:#333;}
+.page_list .this {background-color:#ccc;color:#333;}
+.page_list li a{display:block;text-decoration: none;}
+.page_list li a:link{color:#2ca9e1;}
+.page_list li a:visited{color: #9e3d3f;}
+.page_list li a:hover {color: #fff;text-decoration: none;background-color: #ed6d3d;}
+
+
+
+/*
+-------------------------------------------------------------------------------
+フッターメニュー
+-------------------------------------------------------------------------------
+*/
+footer{
+  background-color: #223a70;
+  height: 160px;
+  width:100%;
+}
+
+.footer-logo{
+  font-family: 'Jockey One', sans-serif;
+  font-size: 30px;
+  float: left;
+  padding-left:40px;
+  color:#d7003a;
+  padding-top:8px;
+}
+.footer-logo a:link, a:visited{
+  text-decoration: none;
+  color: #d7003a;
+}
+
+ .footer-menu{
+   font-size: 12px;
+   float:right;
+   color:white;
+   padding:6px;
+ }
+ .footer-menu li{
+   list-style:none;
+   padding-top:2px;
+   padding-right:7px;
+ }
+ .footer-menu a{
+   text-decoration: none ;
+ }
+ .footer-menu a:link{
+   color:white;
+ }
+ .footer-menu a:visited{
+   color:white;
+ }
+ .footer-menu a:active{
+   color:#ed6d3d;
+ }
+ /*
+ -------------------------------------------------------------------------------
+ 汎用コード
+ -------------------------------------------------------------------------------
+ */
+
+ .head-line{
+   text-align: center;
+   font-size: 20px;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+ }
+ /*上下が直線に囲まれた，見出し的なものを出力します*/
+
+ /*
+ -------------------------------------------------------------------------------
+ */
