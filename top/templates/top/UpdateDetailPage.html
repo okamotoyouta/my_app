@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{%  static 'top/ReGrandeVue_Leader.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'top/ReGrandeVueScript_Leader.css' %}">
+    <title>GrandeVue Top</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <script src="script_top.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+</head>
+
+
+<header>
+    <div class="header-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
+    <div class="header-menu">
+        <ol>
+        <li><a href="http://127.0.0.1:8000/blog/">Article</a></li>
+        <li><a href="#">Gallary</a></li>
+        <li><a href="#">Computer</a></li>
+        <li><a href="http://127.0.0.1:8000/admin">Log In</a></li>
+            <ol>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="main-contents">
+            <p>
+
+            <p class="date">{{ update.date_posted }}</p>
+
+            <p class="title">{{ update.title }}</p>
+            {% for content in update.content.all %}
+
+            <p>{{ content.content }}</p>
+
+            {% endfor %}
+
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+<footer>
+    <div class="footer-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
+    <div class="footer-menu">
+        <ol>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="GrandeVue_Info/GrandeVue_Info.html">サイト概要</a></li>
+            <li><a href="#">Webポリシー</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">English</a></li>
+
+        </ol>
+    </div>
+</footer>
+
+
+
+
+</html>

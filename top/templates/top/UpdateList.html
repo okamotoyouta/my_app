@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%  static 'top/ReGrandeVue_Leader.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'top/ReGrandeVueScript_Leader.css' %}">
+    <title>GrandeVue Top</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+</head>
+
+
+<header>
+    <div class="header-logo"><a href="http://127.0.0.1:8000">GrandeVue</a></div>
+    <div class="header-menu">
+        <ol>
+            <li><a href="http://127.0.0.1:8000/blog/">Article</a></li>
+            <li><a href="#">Gallary</a></li>
+            <li><a href="#">Computer</a></li>
+            <li><a href="http://127.0.0.1:8000/admin">Log In</a></li>
+            <ol>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="main-contents">
+
+
+
+            <p class="head-line-A">
+                はじめに
+            </p>
+            <p class="purpose">
+                ただの大学生が（いろいろな）勉強の記録を残すためのサイトです。
+            </p>
+            <p class="purpose">
+                サイトの閲覧に際しては，<a href="#">サイト概要</a>（未だ作成中）をご覧いただいきますようお願い申し上げます。
+            </p>
+            <p class="purpose">
+                Twitter: @okamotoyouta
+            </p>
+            <p class="purpose">
+                Mail Address: grandevueabricot[at]gmail.com
+            </p>
+
+            <div class="topic-update">
+
+                <div class="update-info">
+                    更新情報&トピックス
+                </div>
+                <div class="update">
+                    {% for update in updates %}
+                    <p>
+                        {{ update.date_posted|date:"Y/m/d" }}　
+                        <a href="{% url 'top:UpdateDetailPage' update.pk %}">
+                            {{ update.title }}
+                        </a>
+
+                        {% if update.new %}
+                        　<span class="new">new!!</span>
+                        {% endif %}
+                    </p>
+                    {% endfor %}
+                    <p>2020/05/25　更新情報タブを追加しました。</p>
+                    <p>2020/05/11　サイトをオープンしました。</p>
+                </div>
+
+               
+
+            </div>
+
+            <div class="thumnail-pare">
+                <script type="text/javascript">
+                var imglist = new Array(
+                        "{% static 'top/images/Huku.jpeg' %}",
+                        "{% static 'top/images/Fre.jpeg' %}",
+                        "{% static 'top/images/SAKURA.jpeg' %}",
+                        "{% static 'top/images/Ajisai.jpeg' %}",
+                        "{% static 'top/images/shirakawa.jpeg' %}"
+                    );
+
+                    var selectnum = Math.floor(Math.random() * imglist.length);
+                    var output = "<img class = 'thumnail' src=" + imglist[selectnum] + ">";
+                    document.write(output);
+                </script>
+                <p calss="caption">最近撮った/撮ってもらった写真</p>
+            </div>
+
+            <div class="trouble">
+                <p><span class = "comment-out">コメントアウト</span></p>
+                <p>絵画を使ったデザインに変更したけど，ブログページのCSSはいまだに変更できていない。めんどくさい。あとJavaScriptも実装したいけど，めんどくさい。</p>
+                <p>時間がない。</p>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+
+<footer>
+    <div class="footer-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
+    <div class="footer-menu">
+        <ol>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="GrandeVue_Info/GrandeVue_Info.html">サイト概要</a></li>
+            <li><a href="#">Webポリシー</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">English</a></li>
+
+        </ol>
+    </div>
+</footer>
+
+
+
+
+</html>

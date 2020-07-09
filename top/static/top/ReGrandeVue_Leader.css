@@ -1,0 +1,94 @@
+
+header{
+
+}
+
+.header-logo{
+  color:#d7003a;
+}
+
+.header-logo a:link, a:visited{
+  color: #d7003a;
+}
+
+.header-menu{
+  color:#eae5e3;
+}
+
+.header-menu a:link{
+   color:white;
+}
+
+.header-menu a:visited{
+   color: white;
+}
+
+.header-menu a:active{
+   color:#ed6d3d;
+}
+
+body{
+  background-color: #eae5e3;
+}
+
+.main-contents a:link{
+  color: #2ca9e1;
+}
+.main-contents a:visited{
+  color: #9e3d3f;
+}
+
+footer{
+  
+}
+
+.footer-logo{
+  color:#d7003a;
+}
+
+.footer-logo a:link, a:visited{
+  color: #d7003a;
+}
+
+.footer-menu a:link{
+   color:white;
+}
+
+.footer-menu a:visited{
+   color:white;
+}
+
+.footer-menu a:active{
+   color:#ed6d3d;
+}
+
+.head-line-A{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.head-line-B{
+  border-bottom: 1px solid black;
+}
+
+.head-line-C{
+  background-color: #99ab4e;
+  color: white;
+}
+
+.rindou{
+  background-color: #9079ad;
+}
+
+.here{
+  border-bottom: 1px solid #d7003a;
+  color:#d7003a;
+}
+
+.faq-list-item {
+  border-bottom:1px solid #ccc;
+}
+
+.faq-list-item span {
+  color:#ccc;
+}

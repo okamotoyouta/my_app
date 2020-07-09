@@ -9,12 +9,13 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
   <script src="script_top.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
 
 
   <header>
-    <div class="header-logo"><a href="#">GrandeVue</a></div>
+    <div class="header-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
     <div class="header-menu">
       <ol>
         <li><a href="#" >STUDY</a></li>
@@ -58,6 +59,18 @@
         </div>
 
 
+        {% for post in posts %}
+
+        {% for content in post.post.all %}
+
+        {{ content }}
+
+        {% endfor %}
+
+        {% endfor %}
+
+
+
 
         <div class = "pagenation">
           <ul class = "page_list">
@@ -90,7 +103,7 @@
 
 
   <footer>
-    <div class="footer-logo"><a href="#">GrandeVue</a></div>
+    <div class="footer-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
 
 
 

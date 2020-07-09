@@ -1,15 +1,22 @@
 from django.contrib import admin
 
-from .models import Topics
+from .models import Update, UpdateDetail
 
+class DetailInline(admin.StackedInline):
+    model = UpdateDetail
+    extra = 0
 
+class DetailInline(admin.StackedInline):
+    model = UpdateDetail
+    extra = 0
 
-
-
-class TopicsAdmin(admin.ModelAdmin):
+class UpdateAdmin(admin.ModelAdmin):
+    inlines = [DetailInline]
     list_display = ("id", "title")
     list_display_links = ("id", "title")
 
 
 
-admin.site.register(Topics, TopicsAdmin)
+admin.site.register(Update, UpdateAdmin)
+
+admin.site.register(UpdateDetail)

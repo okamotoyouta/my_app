@@ -9,17 +9,18 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
   <script src="script_top.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
 
   <header>
-    <div class="header-logo"><a href="#">GrandeVue</a></div>
+    <div class="header-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
     <div class="header-menu">
       <ol>
         <li><a href="#" >STUDY</a></li>
         <li><a href="#">PICTURE</a></li>
         <li><a href="#">COMP</a></li>
-        <li><a href="#">BLOG</a></li>
+        <li><a href="http://127.0.0.1:8000/blog/">BLOG</a></li>
         <li><a href="#">LOG IN</a></li>
       <ol>
     </div>
@@ -29,7 +30,17 @@
     <div>
       <div class="main-contents">
         <p>
-          {{ posts.content }}
+
+          <p class = "date">{{ post.date_posted }}</p>
+
+          <p class = "title">{{ post.title }}</p>
+          {% for content in post.content.all %}
+
+          <p class = "head-line-C">{{ content.headline }}</p>
+          <p>{{ content.content }}</p>
+
+          {% endfor %}
+
         </p>
 
       </div>
@@ -40,7 +51,7 @@
 
 
   <footer>
-    <div class="footer-logo"><a href="#">GrandeVue</a></div>
+    <div class="footer-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
     <div class="footer-menu">
       <ol>
         <li><a href="#">お問い合わせ</a></li>
