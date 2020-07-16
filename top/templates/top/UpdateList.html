@@ -14,13 +14,13 @@
 
 
 <header>
-    <div class="header-logo"><a href="http://127.0.0.1:8000">GrandeVue</a></div>
+    <div class="header-logo"><a href="{% url 'top:UpdateList' %}">GrandeVue</a></div>
     <div class="header-menu">
         <ol>
-            <li><a href="http://127.0.0.1:8000/blog/">Article</a></li>
+            <li><a href="{% url 'blog:PostList' %}">Article</a></li>
             <li><a href="#">Gallary</a></li>
             <li><a href="#">Computer</a></li>
-            <li><a href="http://127.0.0.1:8000/admin">Log In</a></li>
+            <li><a href="{% url 'admin:index' %}">Log In</a></li>
             <ol>
     </div>
 </header>
@@ -109,11 +109,11 @@
 
 
 <footer>
-    <div class="footer-logo"><a href="http://127.0.0.1:8000/">GrandeVue</a></div>
+    <div class="footer-logo"><a href="{% url 'top:UpdateList' %}">GrandeVue</a></div>
     <div class="footer-menu">
         <ol>
             <li><a href="#">お問い合わせ</a></li>
-            <li><a href="GrandeVue_Info/GrandeVue_Info.html">サイト概要</a></li>
+            <li><a href="#">サイト概要</a></li>
             <li><a href="#">Webポリシー</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">English</a></li>

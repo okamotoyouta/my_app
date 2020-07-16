@@ -26,7 +26,7 @@ SECRET_KEY = 'o=z@)v)os19gtp6q($5tfb-!nu+_3wp^g0bp_zsin%k&^nnzcl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["abricot.jp"]
 
 
 # Application definition
@@ -122,3 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/usr/share/nginx/html/static'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/usr/share/nginx/html/media'
